@@ -1,0 +1,11 @@
+ci:
+    image: joaodubas/jenkins:latest
+    volumes:
+        - ./home:/var/jenkins_home
+        - ../loggi/ops:/opt/loggi/ops
+        - /usr/bin/docker:/usr/bin/docker
+        - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+        TERM: xterm
+    ports:
+        - "8000:8080"
