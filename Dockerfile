@@ -17,6 +17,7 @@ RUN apt-get -y -qq --force-yes update \
         PyYAML==3.11 \
         Jinja2==2.7.3 \
         httplib2==0.9 \
+        docker-py==0.7.1 \
     && pip install ansible==1.8.2
 
 RUN groupadd -g 999 docker \
