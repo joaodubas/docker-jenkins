@@ -1,2 +1,4 @@
 home/*
+tmp/*
 !home/.exists
+!tmp/.exists

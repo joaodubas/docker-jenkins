@@ -1,6 +1,7 @@
 ci:
     image: joaodubas/jenkins:latest
     volumes:
+        - ./tmp:/tmp/jenkins
         - ./home:/var/jenkins_home
         - ../loggi/ops:/opt/loggi/ops
         - /usr/bin/docker:/usr/bin/docker

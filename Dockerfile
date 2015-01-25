@@ -29,3 +29,4 @@ RUN pip install \
 USER jenkins
 COPY ./jenkins/plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+VOLUME ["/tmp/jenkins"]
