@@ -1,12 +1,15 @@
 ci:
-    image: joaodubas/jenkins:latest
+    image: loggi/jenkins:latest
     volumes:
         - ./tmp:/tmp/jenkins
         - ./home:/var/jenkins_home
         - ../loggi/ops:/opt/loggi/ops
+        - /var/shared_config:/var/shared_config
         - /usr/bin/docker:/usr/bin/docker
         - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /opt/loggi/ops/ansible
     environment:
         TERM: xterm
     ports:
         - "8000:8080"
+    hostname: local
