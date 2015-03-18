@@ -1,3 +1,4 @@
+---
 ci:
     image: loggi/jenkins:latest
     volumes:
