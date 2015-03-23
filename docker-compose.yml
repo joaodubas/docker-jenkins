@@ -2,10 +2,15 @@
 ci:
     image: loggi/jenkins:latest
     volumes:
+        # jenkins
         - ./tmp:/tmp/jenkins
         - ./home:/var/jenkins_home
+        # ansible deploy/build process
         - ../loggi/ops:/opt/loggi/ops
+        - /opt/loggi/ops/staging:/opt/loggi/ops/staging
+        - /opt/loggi/ops/production:/opt/loggi/ops/production
         - /var/shared_config:/var/shared_config
+        # docker
         - /usr/bin/docker:/usr/bin/docker
         - /var/run/docker.sock:/var/run/docker.sock
     working_dir: /opt/loggi/ops/ansible
@@ -13,4 +18,5 @@ ci:
         TERM: xterm
     ports:
         - "8000:8080"
+        - "50000:50000"
     hostname: local
