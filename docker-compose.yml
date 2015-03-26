@@ -7,8 +7,8 @@ ci:
         - ./home:/var/jenkins_home
         # ansible deploy/build process
         - ../loggi/ops:/opt/loggi/ops
-        - /opt/loggi/ops/staging:/opt/loggi/ops/staging
-        - /opt/loggi/ops/production:/opt/loggi/ops/production
+        - /opt/loggi/staging:/opt/loggi/staging
+        - /opt/loggi/production:/opt/loggi/production
         - /var/shared_config:/var/shared_config
         # docker
         - /usr/bin/docker:/usr/bin/docker
