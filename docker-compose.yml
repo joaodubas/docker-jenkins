@@ -6,7 +6,7 @@ ci:
         - ./tmp:/tmp/jenkins
         - ./home:/var/jenkins_home
         # ansible deploy/build process
-        - ../loggi/ops:/opt/loggi/ops
+        - /opt/loggi/ops:/opt/loggi/ops
         - /opt/loggi/staging:/opt/loggi/staging
         - /opt/loggi/production:/opt/loggi/production
         - /var/shared_config:/var/shared_config
