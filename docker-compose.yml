@@ -10,12 +10,15 @@ ci:
         - /opt/loggi/staging:/opt/loggi/staging
         - /opt/loggi/production:/opt/loggi/production
         - /var/shared_config:/var/shared_config
+        # local code
+        - /opt/loggi/web:/opt/loggi/web
         # docker
         - /usr/bin/docker:/usr/bin/docker
         - /var/run/docker.sock:/var/run/docker.sock
     working_dir: /opt/loggi/ops/ansible
     environment:
         TERM: xterm
+        HOST_JENKINS_HOME: /home/joaodubas/public/jenkins/home
     ports:
         - "8000:8080"
         - "50000:50000"
